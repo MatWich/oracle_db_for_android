@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %} ORACLE DB {% endblock %}
+{% block body %}
+<div class="center">
+    <form method="post">
+        <label> Enter your query here </label><br />
+        <input type="text" name="query" id="query" placeholder="eg. SELECT SYSDATE FROM DUAL" ><br />
+        <label> Enter pagination </label> <br />
+        <input type="number" name="pagination" id="pagination" placeholder="eg. 10"><br />
+
+        <input id="submit" type="submit" name="submit" value="Submit"> <br />
+    </form>
+</div>
+{% if result %}
+    <div class="center">
+        <table>
+            <caption> Query result </caption>
+<!--            loading headers -->
+        <tr>
+            {% for header in headers %}
+                <th> {{ header|upper }} </th>
+            {% endfor %}
+        </tr>
+<!--            loading data -->
+        {% for row in data %}
+            {% if start <= loop.index %}
+                {% if how_many + start > loop.index %}
+                    <tr>
+                        {% for i in row %}
+                            <td>{{ i }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+        </table>
+    </div>
+<br />
+
+<footer class="site-footer">
+    <div class="center">
+        <form method="post">
+            {% for i in range(pages_amount) %}
+                <button type="submit" name="page{{ loop.index0|int }}" value="{{ loop.index0|int }}">{{ loop.index|int }}</button>
+            {% endfor %}
+        </form>
+    </div>
+</footer>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">oracle_db_query_app</string>
+    <string name="query">Query</string>
+    <string name="submit_btn_placeholder">Button</string>
+</resources>

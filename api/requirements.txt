@@ -1,0 +1,3 @@
+Flask==1.1.1
+SQLAlchemy==1.3.13
+cx_Oracle==8.2.1

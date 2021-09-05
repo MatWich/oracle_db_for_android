@@ -1,0 +1,79 @@
+* {
+    margin: 0
+    padding: 0
+}
+
+body {
+    background: #e5fdd1;
+    font-size: 1rem;
+}
+
+table {
+    margin: auto;
+}
+
+th:tr {
+    color: blue;
+}
+
+tr:nth-of-type(2n) {
+    border: 1px solid black;
+    background-color: rgba(150, 150, 150, 0.7);
+}
+
+td {
+    padding: .5em .5em;
+    border: 1px solid black;
+}
+
+tr {
+    color: black;
+}
+
+caption {
+    margin: 1em;
+    font-size: 3rem;
+    caption-weight: 700;
+}
+
+#submit {
+    margin=top: 2em;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid green;
+}
+
+input {
+    width: 250px;
+    margin: auto;
+}
+
+#page_no {
+    margin: auto;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.site-footer {
+    line-height: 35px;
+    padding: 15px 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    display: block;
+    z-index:999999;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%
+}
